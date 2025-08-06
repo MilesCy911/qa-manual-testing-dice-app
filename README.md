@@ -23,3 +23,7 @@ This project showcases my manual QA testing skills using a basic HTML/JS Dice Ro
 - UI consistency
 - Edge case resilience
 - Refresh behavior
+
+## 🌐 Live Demo
+
+👉 [Click here to try the Dice Roller App](https://milescy911.github.io/qa-manual-testing-dice-app/)
