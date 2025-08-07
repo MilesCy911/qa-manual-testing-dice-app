@@ -1,12 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Dice Roller</title>
+  <style>
+    body {
+      background-color: #f0f0f0; /* Light gray background */
+      margin: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 3rem;
+    }
+
+    .dice-header span {
+      font-weight: bold;
+      font-size: 3rem;
+      padding: 0 6px;
+    }
+
+    .dice-header .r { color: black; }
+    .dice-header .o { color: white; background: black; padding: 0 6px; border-radius: 5px; }
+    .dice-header .l { color: red; }
+    .dice-header .l2 { color: green; }
+    .dice-header .t { color: blue; }
+    .dice-header .h { color: orange; }
+    .dice-header .e { color: purple; }
+    .dice-header .d { color: darkred; }
+    .dice-header .i { color: darkgreen; }
+    .dice-header .c { color: navy; }
+    .dice-header .e2 { color: maroon; }
+
+    button {
+      padding: 15px 30px;
+      font-size: 1.5rem;
+      border: none;
+      border-radius: 10px;
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+      margin-top: 30px;
+    }
+
+    #result {
+      font-size: 2rem;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Roll the Dice 🎲</h1>
+
+  <h1 class="dice-header">
+    <span class="r">R</span>
+    <span class="o">O</span>
+    <span class="l">L</span>
+    <span class="l2">L</span>
+    <span class="t"> </span>
+    <span class="t">T</span>
+    <span class="h">H</span>
+    <span class="e">E</span>
+    <span class="d"> </span>
+    <span class="d">D</span>
+    <span class="i">I</span>
+    <span class="c">C</span>
+    <span class="e2">E</span>
+  </h1>
+
+  <div id="result">You rolled: -</div>
   <button onclick="rollDice()">Roll</button>
-  <p id="result">You rolled: </p>
 
   <script>
     function rollDice() {
@@ -14,5 +83,7 @@
       document.getElementById("result").innerText = "You rolled: " + roll;
     }
   </script>
+
 </body>
 </html>
+
