@@ -5,7 +5,7 @@
   <title>Dice Roller</title>
   <style>
     body {
-      background-color: #f0f0f0; /* Light gray background */
+      background-color: #f0f0f0; /* Light gray */
       margin: 0;
       font-family: Arial, sans-serif;
       text-align: center;
@@ -24,54 +24,57 @@
     .dice-header span {
       font-weight: bold;
       font-size: 3rem;
-      padding: 0 6px;
+      padding: 0 10px;
+      border-radius: 5px;
     }
 
-    .dice-header .r { color: black; }
-    .dice-header .o { color: white; background: black; padding: 0 6px; border-radius: 5px; }
-    .dice-header .l { color: red; }
-    .dice-header .l2 { color: green; }
-    .dice-header .t { color: blue; }
-    .dice-header .h { color: orange; }
-    .dice-header .e { color: purple; }
-    .dice-header .d { color: darkred; }
-    .dice-header .i { color: darkgreen; }
-    .dice-header .c { color: navy; }
-    .dice-header .e2 { color: maroon; }
+    .black {
+      color: white;
+      background-color: black;
+    }
 
-    button {
-      padding: 15px 30px;
-      font-size: 1.5rem;
-      border: none;
-      border-radius: 10px;
-      background-color: #333;
-      color: #fff;
-      cursor: pointer;
-      margin-top: 30px;
+    .white {
+      color: black;
+      background-color: white;
+      border: 1px solid #ccc;
     }
 
     #result {
       font-size: 2rem;
+      margin-top: 30px;
+      font-weight: bold;
+    }
+
+    button {
       margin-top: 20px;
+      padding: 15px 30px;
+      font-size: 1.5rem;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #555;
     }
   </style>
 </head>
 <body>
 
   <h1 class="dice-header">
-    <span class="r">R</span>
-    <span class="o">O</span>
-    <span class="l">L</span>
-    <span class="l2">L</span>
-    <span class="t"> </span>
-    <span class="t">T</span>
-    <span class="h">H</span>
-    <span class="e">E</span>
-    <span class="d"> </span>
-    <span class="d">D</span>
-    <span class="i">I</span>
-    <span class="c">C</span>
-    <span class="e2">E</span>
+    <span class="black">R</span>
+    <span class="white">O</span>
+    <span class="black">L</span>
+    <span class="white">L</span>
+    <span class="black">T</span>
+    <span class="white">H</span>
+    <span class="black">E</span>
+    <span class="white">D</span>
+    <span class="black">I</span>
+    <span class="white">C</span>
+    <span class="black">E</span>
   </h1>
 
   <div id="result">You rolled: -</div>
@@ -80,9 +83,13 @@
   <script>
     function rollDice() {
       const roll = Math.floor(Math.random() * 6) + 1;
-      document.getElementById("result").innerText = "You rolled: " + roll;
+      document.getElementById("result").innerText = "You rolled: " + roll + " 🎲";
     }
   </script>
+
+</body>
+</html>
+
 
 </body>
 </html>
